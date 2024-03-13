@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Mayorista</th>
+                <th>Precio Familiar</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="listaDePrecios : ${productos}">
+                <td th:text="${producto.id}"></td>
+                <td th:text="${producto.nombreProducto}"></td>
+                <td th:text="${producto.cantidad}"></td>
+                <td th:text="${producto.precioMayorista}"></td>
+                <td th:text="${producto.precioFamiliar}"></td>
+                <td th:text="${producto.categoria}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
